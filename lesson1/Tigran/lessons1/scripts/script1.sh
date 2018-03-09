@@ -9,5 +9,5 @@ echo "Es" >a.txt
 cd U2
 touch a.txt b.txt
 echo "sovorel em">a.txt
-echo "nor das">b.txt
+echo "grel scriptner">b.txt
 

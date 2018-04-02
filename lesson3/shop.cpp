@@ -19,6 +19,10 @@ int main() {
     float juise_price = 10;
     float tablecloth_price = 2.5;
     double sum = snikers_count * snikers_price + hamburger_count * hamburger_price + cola_count * cola_price + panda_count * panda_price + roshen_count * roshen_price + wather_litr * wather_price + bread_count * bread_price + juise_litr * juise_price + tablecloth_metr * tablecloth_price;
+<<<<<<< HEAD
     std :: cout << "Your sum = " << sum << " $\n";
+=======
+    std::cout << "Your sum = " << sum << " $\n";
+>>>>>>> 78f4fe955a8c56cb10fbe2356c8ea8b949f5eab3
     return 0;
 }

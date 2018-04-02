@@ -2,9 +2,15 @@
 #include "string"
 int main() {
     int num, a, b, c, d;
+<<<<<<< HEAD
     std :: string miavor, tasnavor, haryuravor, hazaravor;
     std :: cout << "Nermuceq [1,9999] mijakayqic voreve tiv: ";
     std :: cin >> num;
+=======
+    std::string miavor, tasnavor, haryuravor, hazaravor;
+    std::cout << "Nermuceq [1,9999] mijakayqic voreve tiv: ";
+    std::cin >> num;
+>>>>>>> 78f4fe955a8c56cb10fbe2356c8ea8b949f5eab3
     if (num < 1 || num > 9999 ) {
         std::cout << "Error! Nermuceq tiv nshvac mijakayqic\n";
     } else {
@@ -63,11 +69,19 @@ int main() {
         if (d == 0 && c == 1) {
             tasnavor = "tasy";
 	}
+<<<<<<< HEAD
         std :: cout << hazaravor;
         a ? std :: cout << "hazar " : std :: cout << "";
         std :: cout << haryuravor;
         b ? std :: cout << " haryur " : std :: cout << "";
         std :: cout << tasnavor << miavor << std :: endl;
+=======
+        std::cout << hazaravor;
+        a ? std::cout << "hazar " : std::cout << "";
+        std::cout << haryuravor;
+        b ? std::cout << " haryur " : std::cout << "";
+        std::cout << tasnavor << miavor << std::endl;
+>>>>>>> 78f4fe955a8c56cb10fbe2356c8ea8b949f5eab3
     }
     return 0;
 }

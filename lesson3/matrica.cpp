@@ -9,7 +9,7 @@ int main() {
     int verevErankyun = 0, nerqevErankyun = 0, ajErankyun = 0, dzaxErankyun = 0;
     for (int i = 0; i < size; i ++) {
         for (int j = 0; j < size; j ++) {
-            mas[i][j] = rand() % 10 + 1;
+            mas[i][j] = rand() % 20 + 10;
             std::cout << mas[i][j] << ' ';
         }
         std::cout << '\n';

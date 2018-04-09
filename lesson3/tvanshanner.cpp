@@ -19,7 +19,9 @@ int main() {
         b = (num % 1000) / 100;
         a = num / 1000;
         switch (d) {
-            case 1 : miavor = "mek"; break;
+            case 1:
+	        miavor = "mek";
+	        break;
             case 2 : miavor = "erku"; break;
             case 3 : miavor = "ereq"; break;
             case 4 : miavor = "chors"; break;

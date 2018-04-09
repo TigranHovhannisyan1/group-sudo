@@ -1,6 +1,12 @@
 #include <iostream>
 int main() {
+<<<<<<< HEAD
+    int size;
+    std::cout << "Size = ";
+    std::cin >> size;
+=======
     const int size = 10;
+>>>>>>> e2fa1c7977c0ea4d428a314ed3f799c98399a3c3
     int mas[size];
     int sumCouple = 0, sumOdd = 0, max, min;
     for (int i = 0; i < size; i ++) {

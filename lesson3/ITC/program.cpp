@@ -1,9 +1,11 @@
 #include <iostream>
+#include <string.h>
 #include "people.cpp"
 int main() {
     std::string searchName;
     std::cout << "Tigran, Nvard, Mariam, Edgar, Lilit, Hrach, Armen, Arpine, Ani, Artur, Miqael, Sasha, Nona\n";
-    people itc[14];// = {Tigran, Nvard, Mariam, Edgar, Lilit, Hrach, Armen, Arpine, Ani, Artur, Miqael, Sasha, Nona};
+    int size = 13;
+    people itc[size];
     people &Tigran = itc[0];
     people &Nvard = itc[1], &Mariam = itc[2], &Edgar = itc[3], &Lilit = itc[4];
     people &Hrach = itc[5], &Armen = itc[6], &Arpine = itc[7], &Ani = itc[8];
@@ -23,10 +25,5 @@ int main() {
     Nona.add("Nona","Musaelyan", 18, "female", true);
     std::cout << "Input name : ";
     std::cin >> searchName;
-    int x = search(itc, searchName, sizeof(itc));
-    if (x != -1) {
-        itc[x].info();
-    } else {
-        std::cout << "Error!!!";
-    }
+    int x = search(itc, searchName, size);
 }

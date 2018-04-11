@@ -14,7 +14,7 @@ struct people {
         student = Student;
     }
     void info() {
-        std::cout << name << ' ' << lastName << ' ' << age << " year old " << gender;
+        std::cout << name << ' ' << lastName << ' ' << age << " years old " << gender;
         if (student) {
             std::cout << " student\n";
         } else {
@@ -23,13 +23,13 @@ struct people {
     }
 };
 
-int search(people *ptr, std::string search, int size) {
-    bool b = false;
-    for (int i = 0; i < size - 1; i++) {
-        if (search == ptr[i].name) {
-            b = true;
+int search(people *ptr, std::string searchName, int size) {
+    for (int i = 0; i < size; i++) {
+        if (searchName == ptr[i].name) {
+            ptr[i].info();
             return i;
         }
     }
-        return -1;
+    std::cout << "ERROR!!\n";
+    return -1;
 }

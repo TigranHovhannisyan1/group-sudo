@@ -3,8 +3,8 @@
 
 int search(int *a, int left, int right, int x) {
     int temp = (left + right) / 2;
-    if (right - left == 1) {
-        return -1;
+    if (right - left <= 1) {
+        return 0;
     } else if (a[temp] == x) {
         return temp;
     } else if (x > a[temp]) {
@@ -26,7 +26,7 @@ int main() {
     std::cout << "\nNermuceq voreve tiv : ";
     std::cin >> tiv;
             int k = search(a, 0, size-1, tiv);
-            if (k != -1) {
+            if (k) {
                 std::cout << "a[" << k+1 << "] = " << tiv << '\n';
             } else {
                 std::cout << "Zangvacum chka " << tiv << '\n';

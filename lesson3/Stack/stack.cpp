@@ -2,33 +2,29 @@
 class Stack {
     private:
         int top;
-        int n;
+        unsigned int n;
         double *arr;
+    public:
         int size() {
             return top;
         }
-    public:
-        Stack(int n = 10) {
+        Stack(unsigned int n = 10) {
+            if(n > 0) {
             this -> n = n;
             arr = new double[n];
             top = -1;
+            } else {
+                std::cout << "Errer!!";
+            }
         }
         ~Stack() {
             delete []arr;
         }
         bool isEmpty() {
-            if(size() == -1) {
-                return true;
-            } else {
-                return false;
+            return (size() == -1);
             }
-        }
         bool isFull() {
-            if(size() == n - 1) {
-                return true;
-            } else {
-                return false;
-            }
+            return (size() == n - 1);
         }
         void push(double x) {
             if(!isFull()){
@@ -42,18 +38,17 @@ class Stack {
                 return arr[top--];
             } else {
                 std::cout << "Stack is Empty!\n";
-                return 0;
+                return -1;
             }
         }
         void print() {
             if (isEmpty()) {
                 std::cout << "Stack is Empty!!\n";
             } else {
-                for (int i = top; i >= 0; i--) {
-                    std::cout << arr[i] <<' ';
+                for (int i = top; i >= 0; --i) {
+                    std::cout << arr[i] << ' ';
                 }
                 std::cout << '\n';
             }
         }
-
 };

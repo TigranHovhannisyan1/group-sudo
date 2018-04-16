@@ -1,20 +1,18 @@
 #include <iostream>
 #include "stack.cpp"
 int main() {
-    int n;
+    unsigned int n;
     std::cout << "Input size : ";
     std::cin >> n;
-    Stack S(n);
+    Stack s(n);
     double x;
-    while (!S.isFull()) {
+    while (!s.isFull()) {
         std::cin >> x;
-        S.push(x);
+        s.push(x);
     }
-    S.print();
-    //S.push(15);
-    while (!S.isEmpty()) {
-        std::cout << S.pop() << ' ';
+    s.print();
+    while (!s.isEmpty()) {
+        std::cout << s.pop() << ' ';
     }
-    //std::cout << S.pop();
     return 0;
 }

@@ -33,7 +33,7 @@ struct person {
     }
 };
 
-void init (person * itc) {
+void init(person * itc) {
     std::cout << "Tigran, Nvard, Mariam, Edgar, Lilit, Hrach, Armen, Arpine, Ani, Artur, Michael, Sasha, Nona\n";
     person &Tigran = itc[0];
     person &Nvard = itc[1], &Mariam = itc[2], &Edgar = itc[3], &Lilit = itc[4];

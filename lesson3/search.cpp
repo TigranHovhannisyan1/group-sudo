@@ -6,7 +6,7 @@ int main() {
     std::cin >> size;
     int a[size];
     for (int i = 0; i < size; i++) {
-        a[i] = rand() % 100 + 1;
+        a[i] = rand() % 101 + 1;
         std::cout << "a[" << i+1 << "] = " << a[i] << '\n';
     }
     std::cout << "\nNermuceq voreve tiv : ";

@@ -2,6 +2,7 @@
 #define point
 
 #include <iostream>
+#include <cmath>
 class Point {
     private:
         float x;
@@ -21,7 +22,10 @@ class Point {
         float getY() {
             return y;
         }
-        void print() {
+        float distance(Point b) {
+            return std::sqrt(pow(b.getX() - this->getX(), 2) + pow(b.getY() - this->getY(), 2));
+        }
+        void virtual print() {
             std::cout << "Point (" << x << ',' << y << ")\n";
         }
 };

@@ -6,34 +6,60 @@
 #include <math.h>
 class Line : public Point {
     private:
-        Point a;
         Point b;
     public:
         Line(Point a, Point b)
-            :a(a)
+            :Point(a)
             ,b(b)
             {}
+        Line(const Line & l)
+            :Point(l)
+            //b(l.getB())
+            {
+            //this->a = l.getA();
+            this->b  = b;
+            std::cout << "Line Coppy constructor\n";
+        }
         ~Line() {}
         void print() {
             std::cout << "Line______\n";
-            a.print();
+            Point::print();
             b.print();
             std::cout << "__________\n";
         }
-	void setA(Point a) {
-            this->a = a;
+        void setA(Point a) {
+            Point::setX(a.getX());
+            Point::setY(a.getY());
         }
         void setB(Point b) {
             this->b = b;
         }
         Point getA() {
-            return a;
+            return Point(Point::getX(), Point::getY());
         }
-        Point setB() {
+        Point getB() {
             return b;
         }
         float getLength() {
-            return sqrt(pow((b.getX() - a.getX()), 2) + pow((b.getY() - a.getY()), 2));
+            return sqrt(pow((b.getX() - Point::getX()), 2) + pow((b.getY() - Point::getY()), 2));
+        }
+        void printCordinates() {
+            if (Point::getX() > b.getX()) {
+                Point temp(Point::getX(), Point::getY());
+                Point::setX(b.getX());
+                Point::setY(b.getY());
+                b = temp;
+            }
+            float x1 = Point::getX();
+            float y1 = Point::getY();
+            float x2 = b.getX();
+            float y2 = b.getY();
+            float k = (y2 - y1) / (x2 - x1);
+            float d = y1 - x1 * k;
+            for (float i = 1, x = x1 + 1; x < x2; ++x, ++i) {
+                float y = k * x + d;
+                std::cout << 'A' << i << " (" << x << ',' << y << ") \n";
+            }
         }
 };
 #endif

@@ -1,49 +1,53 @@
 #include <iostream>
 #include "line.cpp"
-#include <math.h>
+#include <cmath>
 class Rectangle: public Point {
     private:
-        float a, b;
-        Point m;
-        Point n;
-        Point k;
-        Point q;
+        Point b;
     public:
-        Rectangle(float a = 5, float b = 5)
-        : a(a)
-        , b(b) 
-        , m(0, 0)
-        , n(a, 0)
-        , k(a, b)
-        , q(0, b)
-        {}
+        Rectangle(Point a, Point b)
+            : Point(a)
+            , b(b)
+            {}
+        Rectangle(Rectangle& r) 
+            :Point(r) {
+                this->b = b;
+            }
             ~Rectangle() {}
-        void setA(float a) {
-            this->a = a;
+        void setA(Point a) {
+            Point::setX(a.getX());
+            Point::setY(a.getY());
         }
-        float getA() {
-            return a;
+        Point getA() {
+            return Point(Point::getX(), Point::getY());
         }
         void setB(float b) {
             this->b = b;
         }
-        float getB() {
+        Point getB() {
             return b;
         }
-        float Rec_Par(float a, float b) {
-            return 2 * (a + b);
+        float getLength() {
+            return std::abs(Point::getX() - b.getX());
         }
-        float Rec_Area(float a, float b) {
-            return a * b;
+        float getWidth() {
+            return std::abs(Point::getY() - b.getY());
+        }
+        float getPerimeter() {
+            return 2 * (getLength() + getWidth());
+        }
+        float getArea() {
+            return getLength() * getWidth();
         }
         void print() {
             std::cout << "Rectangle \n";
-            m.print();
-            n.print();
-            k.print();
-            q.print();
+            Point::print();
+            b.print();
+            std::cout << "___________\n";
         }
         void view() {
+            float a = getLength();
+            float b = getWidth();
             for (int i=0; i < a; i++) {
                 std::cout << '*';
             }

@@ -37,17 +37,6 @@ class Triangle : public Point {
         Point getC() {
             return c;
         }
-        float getPerimeter() {
-            return Point::distance(b) + b.distance(c) + c.distance(Point(Point::getX(), Point::getY()));
-        }
-        float getArea() {
-            float p = getArea() / 2;
-            float ab = Point::distance(b);
-            float bc = b.distance(c);
-            float ca = c.distance(Point(Point::getX(), Point::getY()));
-            float s = sqrt(p * (p - ab) * (p - bc) * (p - ca));
-            return s;
-        }
         void print() {
             std::cout << "Triangle_______\n";
             Point::print();
@@ -55,6 +44,27 @@ class Triangle : public Point {
             c.print();
             std::cout << "_______________\n";
         }
+        std::string shape() {
+            return "I am a Triangle !!!\n";
+        }
+        virtual float getS() {
+            float p = getP() / 2;
+            float ab = Point::distance(b);
+            float bc = b.distance(c);
+            float ca = c.distance(Point(Point::getX(), Point::getY()));
+            float s = sqrt(p * (p - ab) * (p - bc) * (p - ca));
+            return s;
+        }
+        virtual float getP() {
+            return Point::distance(b) + b.distance(c) + c.distance(Point(Point::getX(), Point::getY()));
+        }
+        virtual void foo() {
+            std::cout << "Triangle foo\n";
+        }
+        virtual void boo() {
+            std::cout << "Triangle boo\n";
+        }
+
 
 };
 #endif

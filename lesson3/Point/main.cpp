@@ -25,7 +25,7 @@ int main() {
     std::cout << "The length of line " << l.getLength() << std :: endl;
     Rectangle t(p,k);
     Rectangle w = t;
-    std::cout << "\nParagic = " << w.getPerimeter() << "\nMakeres = " << w.getArea() << std::endl;
+    std::cout << "\nParagic = " << w.getP() << "\nMakeres = " << w.getS() << std::endl;
     w.print();
     Rectangle* r = &t;
     r->view();
@@ -36,6 +36,23 @@ int main() {
     std::cout << "_V_I_R_T_U_A_L_\n";
     Point *pi = &l;
     pi->print();
-
+    c.shape();
+    std::cout << "p say.- " << p.shape();
+    std::cout << "b say.- " << b->shape();
+    std::cout << "l say.- " << l.shape();
+    std::cout << "tr say.- " <<tr.shape();
+    std::cout << "w say.- " << w.shape();
+    std::cout << "pi say.- " << pi->shape();
+    std::cout << "____________\n";
+    std::cout << "Rectangle S = " << r->getS() <<'\n';
+    std::cout << "Rectangle S = ";
+    printS(r);
+    std::cout << "Triangle S = " << tr.getS() <<'\n';
+    std::cout << "Triangle S = ";
+    printS(&tr);
+    p.foo();
+    b->boo();
+    printS(&l);
+    std::cout << "Triangle P = " << tr.getP() << std::endl;
     return 0;
 }

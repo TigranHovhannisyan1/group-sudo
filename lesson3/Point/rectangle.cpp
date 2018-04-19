@@ -9,7 +9,7 @@ class Rectangle: public Point {
             : Point(a)
             , b(b)
             {}
-        Rectangle(Rectangle& r) 
+        Rectangle(const Rectangle& r) 
             :Point(r) {
                 this->b = b;
             }
@@ -32,12 +32,6 @@ class Rectangle: public Point {
         }
         float getWidth() {
             return std::abs(Point::getY() - b.getY());
-        }
-        float getPerimeter() {
-            return 2 * (getLength() + getWidth());
-        }
-        float getArea() {
-            return getLength() * getWidth();
         }
         void print() {
             std::cout << "Rectangle \n";
@@ -64,5 +58,20 @@ class Rectangle: public Point {
                 std::cout << '*';
             }
             std::cout << std::endl;
+        }
+        std::string shape() {
+            return "I am a Rectangle!!!\n";
+        }
+        virtual float getS() {
+            return getLength() * getWidth();
+        }
+        virtual float getP() {
+            return 2 * (getLength() + getWidth());
+        }
+        virtual void foo() {
+            std::cout << "Rectangle foo";
+        }
+        virtual void boo() {
+            std::cout << "Rectangle boo\n";
         }
 };

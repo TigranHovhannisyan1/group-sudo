@@ -13,13 +13,10 @@ class Line : public Point {
             ,b(b)
             {}
         Line(const Line & l)
-            :Point(l)
-            //b(l.getB())
-            {
-            //this->a = l.getA();
-            this->b  = b;
-            std::cout << "Line Coppy constructor\n";
-        }
+            :Point(l) {
+                this->b  = b;
+                std::cout << "Line Coppy constructor\n";
+            }
         ~Line() {}
         void print() {
             std::cout << "Line______\n";
@@ -61,5 +58,23 @@ class Line : public Point {
                 std::cout << 'A' << i << " (" << x << ',' << y << ") \n";
             }
         }
+        std::string shape() {
+            return "I am a Line\n";
+        }
+        virtual float getS() {
+            std::cout << "The Line does not have an area!!!\n";
+            return -1;
+        }
+        virtual float getP() {
+            std::cout << "The Line does not have an Perimeter!!!\n";
+            return -1;
+        }
+        virtual void foo() {
+            std::cout << "Line foo\n";
+        }
+        virtual void boo() {
+            std::cout << "Line boo\n";
+        }
+
 };
 #endif

@@ -1,0 +1,6 @@
+sudo -s 
+dd if=/dev/zero of=/swapfile bs=1G count=4
+ls -lh /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s

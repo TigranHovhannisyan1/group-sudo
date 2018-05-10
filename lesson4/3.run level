@@ -1,0 +1,5 @@
+
+cd /etc/init
+vim rc-sysinit.conf 
+	env DEFAULT_RUNLEVEL=1
+

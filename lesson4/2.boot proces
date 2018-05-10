@@ -1,0 +1,15 @@
+cd /etc/init.d
+touch script.sh
+vim script.sh
+	#!/bin/sh 
+	cd /home/tigran/Desktop/ 
+	touch text.txt 
+	echo "Hello" >> text.txt
+chmod 754 script.sh 
+./script.sh
+cd /etc/rc5.d
+sudo ln -s ../init.d/script.sh /etc/rc5.d/
+ls -l
+sudo mv script.sh S05script
+
+poweroff

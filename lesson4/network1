@@ -56,6 +56,22 @@
 on the server and use ssh to run xeyes on the server, but display it on your client.
 	apt-get install xeyes
 	ssh -X student@172.20.51.72
+8. Use ssh-keygen to create a key pair without passphrase. Setup passwordless ssh between you and your neighbour. (or between your client and your server)
+ 	ssh-keygen -t rsa
+ 	chmod 700 .ssh/
+ 	scp id_rsa.pub bob@192.168.48.92:~/.ssh/authorized_keys
+ 	cat id_rsa.pub >> ~/.ssh/authorized_keys
+ 
+ 9.Verify that the permissions on the server key files are correct; world readable for the public keys and only root access for the private keys.
+ 	ls -l /etc/ssh/ssh_host_*
+ 
+ 10. Verify that the ssh-agent is running.
+ 	ps fax | grep ssh-agent
+ 
+ 11. (optional) Protect your keypair with a passphrase, then add this key to the ssh-agent and test your passwordless ssh to the server.
+ 	man ssh-keygen
+ 	man ssh-agent
+ 	man ssh-add
 
 
 

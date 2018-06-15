@@ -1,0 +1,78 @@
+#photo {
+	background-image: url(photos/iphone.jpeg);
+	height: 70vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+#button-cv {
+	background-color: green;
+	margin: 20px 200px;
+	padding: 14px 16px;
+}
+#left-side{
+	width: 25vw;
+	height:45vh;
+	float: left;
+	padding: 55px;
+}
+#right-side{
+
+	width: 65vw;
+	height: 60vh;
+	float: right;
+	margin-top: 0;
+	position: relative;
+
+}
+body{
+	margin: 0 0;
+}
+.example{
+	
+	width: 100px;
+	height: 180px;
+	margin-right: -50;
+
+}
+.example:last-child{
+
+	margin-left: 40;
+}
+.text{
+	color: #333;
+	margin-top: 100px;
+	width: 50vw;
+}
+.circle{
+	min-height: 70px;
+	max-height: 80px;
+	min-width: 70px;
+	max-width: 80px;
+	border-radius: 50%;
+	border: 2px double #29aac6;
+	color: #29aac6;
+	display: inline-block;
+	margin: 5% 40%;
+	background-color: white;
+}
+.first{
+	float: right;
+}
+.second{
+	float:right;
+	margin-top: 0;
+}
+.third{
+	float:left;
+	margin-top: 0px;
+}
+
+.num{
+	margin: 25px 25px;
+}
+#numbers{
+	width: 100vw;
+	height: 20vh;
+	background-color: #dde1da;
+}

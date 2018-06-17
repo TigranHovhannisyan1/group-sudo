@@ -1,48 +1,69 @@
 #photo {
 	background-image: url(photos/iphone.jpeg);
 	height: 70vh;
+	width:100vw;
 	background-size: cover;
 	background-repeat: no-repeat;
 
 }
-#button-cv {
-	background-color: green;
-	margin: 20px 200px;
-	padding: 14px 16px;
+#background_shadow{
+	background-color: rgba(130, 35, 132, 0.5);
+	height: 70vh;
+	width:100vw;
+	background-size: cover;
+
 }
+#button-cv {
+	display: inline-block;
+	align-items: center;
+	margin: auto 40%;
+	background-color: green;
+	padding: 14px 16px;
+	border: 0px;
+	border-radius: 8px;
+	width: 240px;
+	color: white;
+
+}
+
 #left-side{
 	width: 25vw;
-	height:45vh;
+	height: 50vh;
 	float: left;
-	padding: 55px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	margin: auto;
 }
 #right-side{
-
 	width: 65vw;
 	height: 60vh;
 	float: right;
 	margin-top: 0;
-	position: relative;
-
+	position: static;
 }
 body{
-	margin: 0 0;
+	margin: auto;
 }
 .example{
-	
-	width: 100px;
-	height: 180px;
-	margin-right: -50;
-
+    position: relative;
+	width: 290px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
 }
-.example:last-child{
+#text_button{
+	width: 700px;
+	height: 200px;
+	margin: 5% auto;
+	align-items: center;
+	display: inline-block;
 
-	margin-left: 40;
 }
 .text{
-	color: #333;
-	margin-top: 100px;
-	width: 50vw;
+	color: white;
+	width: 100%;
 }
 .circle{
 	min-height: 70px;
@@ -50,18 +71,35 @@ body{
 	min-width: 70px;
 	max-width: 80px;
 	border-radius: 50%;
-	border: 2px double #29aac6;
 	color: #29aac6;
-	display: inline-block;
-	margin: 5% 40%;
 	background-color: white;
+	
+	display: flex;
+	align-items: center;
+	margin: 5% auto;
+}
+.users_number{
+	position: static;
+	margin: 0px 40%;
+
+}
+#numbers .circle {
+	border: 2px solid #29aac6;
+}
+#images_line_1 .circle{
+	border: 2px solid #E98724;
+}
+#images_line_2 .circle{
+	border: 2px solid #E98724;
+	margin-top: -10;
 }
 .first{
 	float: right;
+
 }
 .second{
 	float:right;
-	margin-top: 0;
+	margin-top: 0px;
 }
 .third{
 	float:left;
@@ -69,10 +107,43 @@ body{
 }
 
 .num{
-	margin: 25px 25px;
+	margin:auto;
 }
 #numbers{
 	width: 100vw;
 	height: 20vh;
+}
+.numbers_background {
+	width: 100vw;
+	height: 110;
 	background-color: #dde1da;
+}
+.example_1, .example_2, .example_3, .example_4 {
+	background: url(photos/example.png);
+	position: absolute;
+    background-size: cover;
+	width: 100px;
+	height: 200px;
+}
+.example_1 {
+	float: left;
+	margin-top: 0px;
+	margin-right: 0px;
+	z-index: 1;
+}
+.example_2 {
+	margin-top: 25px;
+	margin-left: 45px;
+	z-index: 2;
+}
+.example_3 {
+	margin-top: 15px;
+	margin-left: 110px;
+	z-index: 4;
+}
+.example_4 {
+	float: right;
+	margin-top: 25px;
+	margin-left: 170px;
+	z-index: 3;
 }

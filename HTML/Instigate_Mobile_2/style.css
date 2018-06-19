@@ -1,28 +1,25 @@
 body {
-    background-color : white;
-    padding: 0 0;
-    margin: 0 0 0 0 ;
+    margin: 0;
+    height: 100%;
+    width: 100vw;
 }
 
 #header {
-    margin:0 auto;
-    width: 100vw;
-    height: 5vh;
+    width: 100%;
+    height: 10%;
     background-color: #630b6c;
     list-style:none;
-    font-size: 25px;
  }
 
 
 #bottom {
-	width: 100vw;
+	width: 100%;
    	height: 15vh;
 	position: fixed;
 	color:white;
 	bottom: 0;
     background-color: #630b6c;
     text-align: center;
-    font-size: 30px;
 }
 
 ul{
@@ -37,13 +34,10 @@ a{
     display: none;
 }
 .menu{
+    width: 25%;
     float: left;
     display: inline-block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
-    margin: 0 0 ;
-    width: 220;
     text-decoration: none;
 }
 
@@ -51,15 +45,16 @@ a{
 .menu:hover .drop{
     background-color: #37d2d0;
     display: block;
+    text-align: left;
 }
 
 #main {
-    width: 500px;
+    width: 400px;
     height: 300px;
     background-color: #9ee5bc;
 	border-radius: 8px;
 	margin: 5% auto;
-	padding: 10px;
+	padding: 15px;
 }
 
 .user-name, .user-password, .user-email {
@@ -68,7 +63,7 @@ a{
 	display: block;
 	margin: 15px auto;
 	padding: 15px 15px;
-	width: 470px;
+	width: 100%;
 }
 
 input:focus {
@@ -85,5 +80,12 @@ input:focus {
 }
 
 .button1 {
-	margin-left: 410px;
+	margin-right: 0px;
+    float: right;
+}
+@media screen and (max-width: 500px) {
+    #main {
+    width: 280px;
+    text-align: left;
+    }
 }

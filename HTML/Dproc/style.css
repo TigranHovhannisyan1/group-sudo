@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+}
+.container {
+	width: 100%;
+	height: 100%;
+}
+.icons {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	font-size: 15px;
+	color: white;
+	background-color: #000;
+}
+.icons>div {
+	width: 50%;
+	text-align: left;
+	margin-left: 2%;
+}
+#soc-icons {
+	width: 50%;
+	text-align: right;
+	margin-right: 2%;
+}
+.icons>div>a {
+	font-size: 15px;
+	color: white;
+}
+.icons>div>a>i {
+	font-size: 15px;
+}
+
+.header-container {
+	background-image: url(photos/school.jpg);
+	height: 70%;
+	width:100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.header-container>div {
+	display: block;
+	color: #FFF;
+	text-align: center;
+}
+.headname {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.headname div {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: calc(100%/3);
+	align-items: center;
+}
+.headname div p {
+	width: 80%;
+	font-size: 12px;
+}
+.headname a {
+	margin-top: -35px;
+	height: 70px;
+	width: 70px;
+	background-color: #0e9bc9;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 5px #b0bec3;
+}
+.headname a>i {
+	color: white;
+	font-size: 35px;
+}
+/*	fa fa-cube
+	fa fa-database
+	fa fa-gears
+	fa fa-quote-right
+	fa fa-clone
+	 	fa fa-copyright*/

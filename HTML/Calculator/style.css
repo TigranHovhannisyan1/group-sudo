@@ -1,0 +1,12 @@
+.container {
+	display: flex;
+	align-iteam:center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+.calc {
+	width: 50%;
+	height: 50%;
+	background-color: lightblue;
+}

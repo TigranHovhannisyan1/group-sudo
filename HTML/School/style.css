@@ -1,0 +1,300 @@
+body {
+	margin: 0;
+}
+.container {
+	width: 100%;
+	height: 70%;
+	background-image: url(photos/school.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.container>div {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(130, 92, 147, 0.5);
+}
+.icons {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 40px;
+	font-size: 15px;
+	color: white;
+	background-color: #000;
+
+}
+.icons>div {
+	color: white;
+	width: 50%;
+	text-align: left;
+	margin-left: 2%;
+}
+.icons>div>div {
+	display: inline-block;
+}
+#soc-icons {
+	width: 50%;
+	text-align: right;
+	margin-right: 2%;
+}
+.icons>div a {
+	font-size: 15px;
+	color: white;
+	text-decoration-line: none;
+	margin: 5px 10px;
+}
+.icons>div>div>a>i {
+	font-size: 15px;
+}
+
+.header-container {
+	width:100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.header-container>div {
+	display: block;
+	color: #FFF;
+	text-align: center;
+}
+.headname {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+.headname div {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: calc(100%/3);
+	align-items: center;
+	min-width: 220px;
+	margin-bottom: 35px;
+}
+.headname div p {
+	width: 85%;
+	font-size: 12px;
+	color: grey;
+
+}
+.headname div b {
+	margin-top: 5%;
+}
+.headname a {
+	margin-top: -35px;
+	height: 70px;
+	width: 70px;
+	background-color: #0e9bc9;
+	border-radius: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 5px #b0bec3;
+	text-decoration-line: none;
+
+}
+.headname a>i {
+	color: white;
+	font-size: 35px;
+}
+.second-container {
+	display: flex;
+	flex-wrap:wrap;
+	width: 100%;
+	background-color: #e6f4f9;
+	padding-bottom: 7%;
+}
+.second-left {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	height: 100%;
+	padding: 5%;
+
+}
+.second-left p {
+	color: grey;
+	width: 100%;
+}
+.second-right {
+	width: 40%;
+    height: 100%;
+    padding: 5%;
+    min-width: 320px;
+    position: relative;
+    min-height: 240px;
+}
+.second-right img {
+	width: 50%;
+	box-shadow: 10px 10px #d7dde0;
+	position: absolute;
+}
+.second-right .img2 {
+	top: 40%;
+	left: 30%;
+}
+.our-childrens-container {
+	width: 90%;
+	display: flex;
+	flex-wrap:wrap;
+	padding: 5%;
+}
+.our-childrens {
+	text-align: center;
+}
+
+.our-childrens p {
+	width: 80%;
+	margin: 1% auto;
+}
+.flexible-container {
+	display: flex;
+	flex-wrap:wrap;
+	width: 100%;
+
+}
+.flexible {
+	width: 45%;
+	height: inherit;
+	display: flex;
+	border:1px solid grey;
+	margin: 1%;
+	padding: 1%;
+	min-width: 280px;
+}
+.flexible a {
+	min-width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	display: flex;
+	border: 2px solid orange;
+	justify-content: center;
+	align-items: center;
+	text-decoration-line: none;
+}
+.flexible a>i {
+	font-size: 35px;
+	color: orange;
+
+}
+.flexible p {
+	display: flex;
+	flex-direction: column;
+	margin-left: 2%;
+	color: grey;
+}
+.flexible b {
+	font-size: 14px;
+	margin-bottom: 2%;
+	color: orange;
+
+}
+.about-us-container {
+	width: 100%;
+	height: inherit;
+}
+.about-us-container div {
+	text-align: center;
+	justify-content: center;
+}
+.comment-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.comment {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 27%;
+	border: 1px solid grey; 
+	margin: 1%;
+	padding: 4% 1%;
+	min-width: 280px;
+}
+.comment p {
+	color: grey;
+}
+.comment img {
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+}
+.comment i {
+	color: #08ade3;
+}
+.write-us {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url(photos/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.write-us h2 {
+	margin-top: 5%;
+}
+.write-us h2, .write-us p {
+	color: #FFF;
+}
+.form-container {
+	width: 65%;
+	background-color: white;
+	display: flex;
+	flex-wrap:wrap;
+	padding: 5%;
+	margin: 5%;
+	font-size: 10px;
+}
+.form-container>div {
+	display: flex;
+	flex-direction:column;
+	margin: 1%;
+}
+.name, .email {
+	width: 48%;
+}
+.subject, .message {
+	width: 100%;
+}
+.message>input {
+	height: 20vh;
+}
+.button-container {
+	width: 100%;
+	align-items: end;
+}
+.button-container button {
+	width: 200px;
+	background-color: #15b8ed;
+	padding: 1%;
+	border-radius: 10px;
+	color: white;
+}
+.bottom {
+	text-align: center;
+	color: grey;
+
+}
+@media screen and (max-width: 500px){
+	.flexible {
+		width: 90%;
+	}
+	.comment {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 501px) and (max-width: 1230px) {
+	.second-left{
+		width: 90%;
+	}
+	.second-right{
+		width: 60%;
+		text-align: center;
+	}
+}
+

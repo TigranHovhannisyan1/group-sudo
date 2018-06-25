@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <script type="text/javascript" src="function.js"  async></script>
+        <title>Personal Data</title>
+    </head>
+<body>
+    <header>Please fill in your details</header>
+    <div class="main">
+        <div id="modal">
+            <div class="modal-content">
+                <div id="tool"> </div>
+                <span class="continue">Continue</span>
+            </div>
+        </div>
+        <form id="form1">
+            <p>Name  <input name="Name"     placeholder="Name" />
+            <p>Lastname  <input name="Lastname"  placeholder="Lastname" />
+            <p>Gender
+            <div id="rates">
+                <input type="radio" name="gender" id="gender_Male"   value="Male"> Male
+                <input type="radio" name="gender" id="gender_Female" value="Female"> Female  
+            </div>  
+            <p><input type="button" value="OK" onclick="to_realize (this.form)" />
+        </form>
+        
+        <div id="fromyou">
+            <div class="container">
+                <form id="form2">
+                    <input name="name"     placeholder="Name" />
+                    <input name="surname"  placeholder="Surname" />
+                    <input name="adress"     placeholder="Adress" />
+                    <input name="city"  placeholder="City" />
+                    <input name="country"     placeholder="Country" />
+                    <input name="phone"  placeholder="Phone" />
+                    <input class="but" type="button" value="OK" onclick="info_cart (this.form)" />
+                </form>
+                <div id="info-container"></div>
+            </div>
+        </div>
+    </div>
+    <footer> <p>The site was created with the support of Nikor Pashinyan </p></footer>
+</body>
+</html>

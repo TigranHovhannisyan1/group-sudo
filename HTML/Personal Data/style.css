@@ -1,10 +1,13 @@
 * {
-    color:#881090;
+    color:#3482c5;
 }
 body {
     width: 100vw;
     height: 100vh;
     margin: 0;
+    background-image: url("images/apple.jpg");
+    background-size: cover;
+    background-position: center;
 }
 header {
     width: 100vw;
@@ -13,23 +16,29 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:grey;
+    background-color:#4c4a4e;
 }
 
 .main {
     width: 100%;
     height: 90%;
     padding:0;
-    background-image: url("images/apple.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center center;
+}
+#container-form1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: absolute;
+    background-color: rgba(0,0,0,0.5);
 }
 #form1 {
-    height: 100%;
-    background: url(images/dragon.jpg);
+    padding: 10%;
+    background-color: #4f5454;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -37,6 +46,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    padding: 5%;
 
 }
 #form1 p {
@@ -67,19 +78,12 @@ header {
     font-weight: bold;
     right: 2%;
 }
-.modal-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .container {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
 }
 .continue:hover,
 .continue:focus {
@@ -90,9 +94,8 @@ header {
 #fromyou {
     width: 100%;
     height: 95%;
-    margin: 5% 0 0 0;
     text-align: center;
-    display: none;
+    display: flex;
 }
 
 #form2 {
@@ -113,7 +116,6 @@ header {
 }
 #info-container {
     width: 100%;
-    height: 100%;
     border-radius: 10px;
     background-color: rgba(53, 42, 65, 0.8);  
 }
@@ -122,12 +124,13 @@ table {
     text-align: left;
     margin:10px;
     border: 1px solid white;
+    padding: 5%;
 
 }
 footer {
     width: 100%;
     height: 5%;
-    position: relative;
+    position: fixed;
     display: flex; 
     justify-content: center;
     align-items: center;

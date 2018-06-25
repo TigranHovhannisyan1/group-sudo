@@ -6,25 +6,27 @@
         <title>Personal Data</title>
     </head>
 <body>
-    <header>Please fill in your details</header>
+    <header><div class="modal-content">
+                <div id="tool"> </div>
+                
+            </div></header>
     <div class="main">
         <div id="modal">
-            <div class="modal-content">
-                <div id="tool"> </div>
-                <span class="continue">Continue</span>
-            </div>
+            
         </div>
-        <form id="form1">
-            <p>Name  <input name="Name"     placeholder="Name" />
-            <p>Lastname  <input name="Lastname"  placeholder="Lastname" />
-            <p>Gender
-            <div id="rates">
-                <input type="radio" name="gender" id="gender_Male"   value="Male"> Male
-                <input type="radio" name="gender" id="gender_Female" value="Female"> Female  
-            </div>  
-            <p><input type="button" value="OK" onclick="to_realize (this.form)" />
-        </form>
-        
+        <div  id="container-form1"> 
+            <form id="form1">
+                <p>Name  <input name="Name"     placeholder="Name" />
+                <p>Lastname  <input name="Lastname"  placeholder="Lastname" />
+                <p>Gender
+                <div id="rates">
+                    <input type="radio" name="gender" id="gender_Male"   value="Male"> Male
+                    <input type="radio" name="gender" id="gender_Female" value="Female"> Female  
+                </div>  
+                <p><input type="button" value="OK" onclick="to_realize (this.form)" />
+            </form>
+        </div>
+
         <div id="fromyou">
             <div class="container">
                 <form id="form2">

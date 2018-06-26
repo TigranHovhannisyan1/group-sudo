@@ -5,36 +5,56 @@ function to_realize (fornm1) {
     }else if(document.getElementById('gender_Female').checked) {
         gender = "Mrs.";
     }
-    var str = [ gender, fornm1 ['Name'].value,fornm1 ['Lastname'].value ].join('  ');
+    var str = [ gender, fornm1 ['Name'].value,fornm1 ['Lastname'].value ].join('  '); 
     document.getElementById ('tool').innerHTML = str;
-    // document.getElementById ('modal').style.display = 'block';
     document.getElementById ('form1').style.display = 'none';
     document.getElementById ('container-form1').style.display = 'none';
     fromyou = document.getElementById ('fromyou');
     fromyou.style.display = 'block';
+    localStorage.setItem('form1', true);
+    localStorage.setItem('str', str);
 }
 
 function info_cart(form2) {
-    var table ="<table ><tr><td> Name: </td> <td>";
-    table += form2["name"].value + "</td></tr><tr><td>Surtname: </td> <td>"+ 
-    form2["surname"].value + "</td></tr><tr><td>Adress: </td> <td>"+ form2["adress"].value + 
-    "</td></tr><tr><td>City: </td> <td>"+ form2["city"].value + "</td></tr><tr><td>Country: </td> <td>"+ 
-    form2["country"].value + "</td></tr><tr><td>Phone: </td> <td>"+ form2["phone"].value + "</td></tr> </table>";
+    user = {"name": form2["name"].value, "surname": form2["surname"].value, "adress": form2["adress"].value, "city": form2["city"].value, "country": form2["country"].value, "phone": form2["phone"].value}
+    var table ='';
+    saveLS();
+    table +=  createTable(user);
     document.getElementById("info-container").innerHTML += table;
     for (var i = 0; i < 6; i++) {
         form2[i].value = "";  
     };
 }
-
-function saveLS() {
-    var divs = localStorage.getItem('divs') || '[]';
-    divs.push({"name": form2["name"].value, "surname": form2["surname"].value, "adress": form2["adress"].value, "city": form2["city"].value, "country": form2["country"].value, "phone": form2["phone"].value)};
-    localStorage.setItem('divs', JSON.stringify(divs));
-    divs = JSON.parse(divs);
-    for (var i = 0; i < divs.length; i++) {
-        var hert = divs[i];
-        var el = '<table>' + hert.name+''
-        console.log(divs[i]);
+function createTable(user) {
+    if (!user) {
+        return '<p></p>';
     }
-    
+    return "<table ><tr><td> Name: </td> <td>" + user.name +"</td></tr><tr><td>Surtname: </td> <td>"+  user.surname
+     + "</td></tr><tr><td>Adress: </td> <td>"+ user.adress + "</td></tr><tr><td>City: </td> <td>"+ user.city + "</td></tr><tr><td>Country: </td> <td>"+ 
+    user.country + "</td></tr><tr><td>Phone: </td> <td>"+ user.phone + "</td></tr> </table>";
+}
+function saveLS() {
+    count = localStorage.getItem('count');
+    count++;
+    var user = {"name": form2["name"].value, "surname": form2["surname"].value, "adress": form2["adress"].value, "city": form2["city"].value, "country": form2["country"].value, "phone": form2["phone"].value};
+    localStorage.setItem('user'+String(count), JSON.stringify(user));
+    localStorage.setItem('count', count);
+}
+ function getLS() {
+    count = localStorage.getItem('count') || 1;
+    for (var i = 1; i <= count; i++) {
+        var user = localStorage.getItem("user" + String(i));
+        user = JSON.parse(user);
+        var table ='';
+        table +=  createTable(user);
+        document.getElementById("info-container").innerHTML += table;
+    }
+}
+window.onload = function() {
+    if(localStorage.getItem('form1')) {
+        document.getElementById ('container-form1').style.display = 'none';
+        document.getElementById ('tool').innerHTML = localStorage.getItem('str');
+    }
+    count = localStorage.getItem('count') || 0;
+    getLS();
 }

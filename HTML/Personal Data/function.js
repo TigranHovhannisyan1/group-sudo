@@ -28,7 +28,7 @@ function info_cart(form2) {
 
 function saveLS() {
     var divs = localStorage.getItem('divs') || '[]';
-    divs.push({"name": form2["name"].value, "Surname": form2["surname"].value});
+    divs.push({"name": form2["name"].value, "surname": form2["surname"].value, "adress": form2["adress"].value, "city": form2["city"].value, "country": form2["country"].value, "phone": form2["phone"].value)};
     localStorage.setItem('divs', JSON.stringify(divs));
     divs = JSON.parse(divs);
     for (var i = 0; i < divs.length; i++) {

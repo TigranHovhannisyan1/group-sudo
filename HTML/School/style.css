@@ -234,6 +234,7 @@ body {
 	background-image: url(photos/background.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: 100%;
 }
 .write-us h2 {
 	margin-top: 5%;

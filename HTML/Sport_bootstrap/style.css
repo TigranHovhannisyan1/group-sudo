@@ -1,21 +1,31 @@
+h2 {
+    font-size: 8vh;
+}
 .wallpaper {
    background: url(images/wallpaper.jpg);
    background-size: cover;
-   height: 500px;
+   /*height: 500px;*/
    color: white;
 }
 .opacity {
     background: rgba(0, 0, 0, 0.5);
     height: 100%;
+    width: 100%;
 }
-#trainMy {
-    font-size: 35px;
+#trainMe {
+    font-size: 6vh;
+}
+.opacity p {
+    font-size: 12vh;
+    text-align:center
+}
+small {
+    font-size: 5vh;
 }
 #lorem {
-    height: 300px;
+    height: 70vh;
 }
 .download {
-    display: flex;
 	width: 72px;
 	height: 52px;
 	border-radius: 26px;
@@ -26,27 +36,144 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1% 0 5% 0;
+
 }
 .title {
     margin-top: 40px;
-	font-size: 40px;
+	font-size: 8vh;
 	color: rgb(20,150,210);
 	font-family: "Roboto";
 	font-weight: 300;
 }
-.layer_21 {
-	background-image: url("images/girl.jpg");
-    background-size: 100% 100%;
+.user {
+  min-width: 333px;
 }
-.layer_22 {
-	background-image: url("images/body.jpeg");
-    background-size: 100% 100%;
+.user ul {
+    list-style-type: none;
+    font-size: 5vh;
 }
-.layer_23 {
-	background-image: url("images/purin.jpg");
-    background-size: 100% 100%;
+.user span {
+    font-size: 10vh;
+    /*position: relative;*/
 }
-.card>img {
+.rectangle_6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 15%;
+    background-color: #353331;
+    position: absolute;
+    right: -15px;
+    bottom: 36px;
+    border-radius: 5px;
+}
+.rectangle_6 p {
+    text-transform: uppercase;
+    color: rgb(255,255,255);
+    font-family: "Source Sans Pro";
+    position: absolute;
+}
+.wallpaper1 {
+    background-image: url(images/wallpaper1.jpg);
+    background-size: cover;
     width: 100%;
-    height: 100%;
+}
+#text {
+    color: white;
+    font-size: 4vh;
+}
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translate(460px, -100px) rotate(180deg);
+  -ms-transform: translate(460px, -100px) rotate(180deg);
+  transform: translate(460px, -100px) rotate(180deg);
+  -webkit-transition: all 0.2s 0.4s ease-in-out;
+  transition: all 0.2s 0.4s ease-in-out;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+  -webkit-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  transform: translateY(-200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.hovereffect a.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+.hovereffect:hover h2 {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.hovereffect:hover a.info {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.effect img {
+    width: 320px;
+    height: 240px;
 }

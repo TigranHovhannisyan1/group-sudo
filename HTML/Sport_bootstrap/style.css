@@ -40,21 +40,26 @@ small {
 
 }
 .title {
+    text-transform: uppercase;
     margin-top: 40px;
 	font-size: 8vh;
 	color: rgb(20,150,210);
 	font-family: "Roboto";
 	font-weight: 300;
 }
+.user-col {
+    margin-bottom: 10px;
+}
 .user {
-  min-width: 333px;
+    height: 100%;
+    min-width: 333px;
 }
 .user ul {
     list-style-type: none;
-    font-size: 5vh;
+    font-size: 3vh;
 }
 .user span {
-    font-size: 10vh;
+    font-size: 6vh;
     /*position: relative;*/
 }
 .rectangle_6 {
@@ -82,7 +87,7 @@ small {
 }
 #text {
     color: white;
-    font-size: 4vh;
+    font-size: 3vh;
 }
 .hovereffect {
   width: 100%;
@@ -176,4 +181,37 @@ small {
 .effect img {
     width: 320px;
     height: 240px;
+}
+.wallpaper2 {
+    background-image: url(images/blue.png);
+    background-size: cover;
+    width: 100%;
+    color: white;
+}
+.big-img {
+    min-width: 32rem;
+    margin:1rem 0px;
+}
+.small-img {
+    min-width: 16rem;
+    margin:10px 0px;
+}
+.say-title {
+    margin-top: 5rem;
+}
+.people-say {
+    min-width: 35rem;
+}
+.wallpaper3 {
+    background-image: url(images/blue.png);
+    background-size: cover;
+    width: 100%;
+    color: white;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid white;
+    border-radius: 7rem;
 }
